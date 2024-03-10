@@ -4,13 +4,16 @@
     <title>Tableau Visualization</title>
     <style>
         #vizWrapper {
-            width:1600px; /* Width set to 900px */
+            width: 100%; /* Set the width to 100% to ensure it spans the entire container */
             height: 870px; /* Height set to 30px less than the original to hide part of the bottom */
             overflow: hidden;
             position: relative;
+            display: flex; /* Use flexbox to center the content vertically and horizontally */
+            justify-content: center;
+            align-items: center;
         }
         #vizContainer {
-            width: 100%;
+            width: 1600px; /* Original width of the viz */
             height: 100%; /* Original height of the viz */
             position: absolute;
             top: 0;
@@ -26,7 +29,7 @@
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-            url = " https://public.tableau.com/views/TestforViz/Compare?:showAppBanner=false&:showVizHome=no&:embed=true&:showShareOptions=false&:origin=viz_share_link&:showShareOptions=false&:showDownload=false",
+            url = "https://public.tableau.com/views/TestforViz/Compare?:showAppBanner=false&:showVizHome=no&:embed=true&:showShareOptions=false&:origin=viz_share_link&:showShareOptions=false&:showDownload=false",
             options = {
                 hideTabs: true,
                 hideToolbar: true
